@@ -1,0 +1,55 @@
+<html>
+<head>
+	
+	<script src="jquery.js"></script>
+	<script src="handlebars-1.0.0.js"></script>
+	<script src="ember-1.0.0.js"></script>
+	<script src="ember-data.js"></script>
+	<script src="app.js"></script>
+	<link   href="bootstrap.css" media="screen" rel="stylesheet">
+
+</head>
+
+<body>
+	<script type="text/x-handlebars" data-template-name='application'>
+	
+
+	<div class='navbar navbar-default'> 
+	<div class='container'> 
+	{{#link-to 'index'}} <img src="images/logo.png" alt ="logo" height ="34" width ="224" > {{/link-to}}
+	<ul class="nav navbar-nav navbar-right"> 
+
+		 {{#link-to 'index' class="navbar-brand" tagName="li"}}Homepage{{/link-to}}
+        {{#link-to 'about'  class="navbar-brand" tagName="li"}}About{{/link-to}}
+        
+
+
+	</ul>
+
+
+	</div>
+
+	</div>
+
+
+
+
+	<div class="container">{{outlet}}</div>
+	<footer class='container'></footer>
+	</script>
+
+	<script type="text/x-handlebars" data-template-name='index'>
+
+	<h1> Welcome to Flint</h1>
+	</script>
+
+	<script type="text/x-handlebars" data-template-name='about'>
+
+	<h1> This is about page</h1>
+
+	</script>
+
+</body>
+
+
+</html>
