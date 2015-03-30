@@ -52,7 +52,7 @@
 
 	<script type="text/x-handlebars" data-template-name='about'>
 
-	<h1> This is about page</h1>
+	<h1> This is about page</h1>s
 
 	</script>
 	
@@ -60,7 +60,22 @@
 	<script type="text/x-handlebars" data-template-name='products'>
 
 	<h1> This is products page</h1>
-
+	{{#each}}
+	<li class ='row'>
+	<img  {{bind-attr src ='image'}}  class ='img-thumbnail col-md-5'/>
+		<div class ='col-md-7'>
+		<h2> {{title}}</h2>
+		<p class='product-description'> {{description}}</p>
+		<p> <button class ='btn btn-success'> Buy for ${{price}} </button></p>
+		</div>
+    </li>
+	{{/each}}
+	</script>
+	
+	<script type='text/x-handlebars' data-templates-name ='product'>
+		<h2> {{title}} </h2>
+		<p> {{description}}</p>
+		<p> Buy For ${{price}}</p>
 	</script>
 </body>
 
